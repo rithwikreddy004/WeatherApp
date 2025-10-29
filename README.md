@@ -37,7 +37,7 @@ To run this project locally, follow these steps:
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/rithwikreddy/WeatherApp.git](https://github.com/rithwikreddy/WeatherApp.git)
     ```
 2.  Navigate to the project directory:
     ```bash
@@ -51,7 +51,7 @@ To run this project locally, follow these steps:
     ```bash
     npm start
     ```
-5.  Open `http://localhost:3000` (or your dev server's port) in your browser.
+5.  Open `http://localhost:5173` (or your dev server's port) in your browser.
 
 ---
 
