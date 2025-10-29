@@ -1,0 +1,199 @@
+/* src/App.css - Modern Dark Mode */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  /* PALETTE: Main Background */
+  background: linear-gradient(to bottom, #1F2937, #111827);
+  
+  /* FIX 1 */
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  
+  /* FIX 2 */
+  align-items: flex-start;
+  
+  padding: 3rem 1rem; 
+  box-sizing: border-box; 
+
+  /* PALETTE: Primary Text (as default) */
+  color: #F9FAFB;
+}
+
+.app-container {
+  /* PALETTE: Main Card */
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(249, 250, 251, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 2.8rem;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+  flex-shrink: 0;
+
+  /* --- FIX 3: THIS SOLVES THE SCROLLBAR/CENTERING --- */
+  /* This ensures padding is *inside* the width, fixing overflow */
+  box-sizing: border-box;
+}
+
+.app-container h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #F9FAFB;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Search Bar */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  padding: 0.8rem 1.2rem;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #374151;
+  color: #F9FAFB;
+  transition: all 0.3s ease;
+  
+  /* --- Add box-sizing here too for good measure --- */
+  box-sizing: border-box;
+}
+
+.search-box input::placeholder {
+  color: #9CA3AF;
+}
+
+.search-box input:focus {
+  background: #4B5563;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
+}
+
+.search-box button {
+  background: #38BDF8;
+  color: #111827;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #0EA5E9;
+}
+
+/* ... (Omitted the unused .weather-card styles for brevity) ... */
+
+
+/* Fade animation (No change needed) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar (No change needed) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* --- FIX 4: MOBILE RESPONSIVENESS --- */
+/* This will apply only to screens 550px or narrower */
+@media (max-width: 550px) {
+  body {
+    /* Reduce padding on mobile so card can be wider */
+    padding: 1.5rem 1rem; 
+  }
+  
+  .app-container {
+    /* Use more of the screen */
+    width: 95%; 
+    /* Reduce padding on the card itself */
+    padding: 2rem 1.5rem; 
+  }
+
+  .app-container h1 {
+    /* Slightly smaller title on mobile */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-box {
+    flex-direction: column; /* Stack search input and button */
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-box input {
+    width: 100%; /* Make input full width */
+  }
+
+  .search-box button {
+    width: 100%; /* Make button full width */
+  }
+}
+
+
+/* --- *** FIX FOR LAPTOP/DESKTOP *** --- */
+/* Apply these styles ONLY if the screen is 600px or wider */
+@media (min-width: 600px) {
+  body {
+    /* Restore larger padding */
+    padding: 3rem 1rem; 
+  }
+
+  .app-container {
+    /* Give it a wider, fixed width on desktop */
+    width: 600px; 
+    /* Restore larger padding */
+    padding: 2.8rem; 
+  }
+
+  .app-container h1 {
+    /* Restore larger title */
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-box {
+    /* Un-stack the search bar */
+    flex-direction: row; 
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .search-box input {
+    width: 70%; /* Input takes 70% */
+  }
+
+  .search-box button {
+    width: 30%; /* Button takes 30% */
+  }
+}

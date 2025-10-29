@@ -1,0 +1,76 @@
+/* src/components/SearchBar.css */
+
+.search-form {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input field */
+.search-input {
+  flex-grow: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  /* PALETTE: Search Bar */
+  background: #374151;
+  /* PALETTE: Primary Text */
+  color: #F9FAFB;
+  /* A subtle shadow for dark mode */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Added placeholder color for dark mode */
+.search-input::placeholder {
+  /* PALETTE: Secondary Info Text */
+  color: #9CA3AF;
+}
+
+.search-input:focus {
+  outline: none;
+  /* Slightly lighter gray on focus */
+  background: #4B5563;
+  /* PALETTE: Accent blue focus ring */
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.4);
+}
+
+/* Search button */
+.search-button {
+  /* PALETTE: Search Button */
+  background: #38BDF8;
+  border: none;
+  border-radius: 12px;
+  /* PALETTE: Dark text for high contrast */
+  color: #111827;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  /* Updated shadow for dark mode */
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  /* Darker accent blue for hover */
+  background: #0EA5E9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
+
+.search-button:disabled {
+  /* PALETTE: Dark disabled state */
+  background: #374151;
+  color: #9CA3AF;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

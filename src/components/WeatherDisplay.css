@@ -1,0 +1,181 @@
+/* src/components/WeatherDisplay.css */
+
+/* Status messages */
+.status-message {
+  font-size: 1.1rem;
+  /* PALETTE: Secondary Info Text */
+  color: #9CA3AF;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.status-message.error {
+  /* Kept red for error, as it's semantic */
+  color: #ff7675;
+  font-weight: 600;
+}
+
+/* Main weather card */
+.weather-card {
+  /* PALETTE: Darker glass for the inner card */
+  background: rgba(55, 65, 81, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  padding: 2rem;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  /* PALETTE: Primary Text */
+  color: #F9FAFB;
+  animation: fadeIn 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Fade-in animation (No change) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* City name */
+.city-name {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  /* PALETTE: Primary Text */
+  color: #F9FAFB;
+}
+
+/* Main weather display */
+.weather-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Weather icons */
+.weather-icon .icon {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* PALETTE: Applying new icon colors */
+.icon.sun { color: #FACC15; } /* Accent Yellow */
+.icon.cloud { color: #9CA3AF; } /* Secondary Info Gray */
+.icon.rain { color: #38BDF8; } /* Accent Blue */
+.icon.snow { color: #F9FAFB; } /* Primary White */
+.icon.wind { color: #9CA3AF; } /* Secondary Info Gray */
+
+/* Temperature */
+.weather-temp {
+  font-size: 4.2rem;
+  font-weight: 500;
+  /* PALETTE: Temperature Text (removed gradient) */
+  color: #F9FAFB;
+  /* Keeping the glow, but using the new text color */
+  text-shadow: 0 0 15px rgba(249, 250, 251, 0.1);
+}
+
+.weather-temp span {
+  font-size: 1.6rem;
+  vertical-align: top;
+  margin-left: 4px;
+  /* PALETTE: Dimmed Primary Text for '°C' */
+  color: rgba(249, 250, 251, 0.9);
+}
+
+/* --- NEW: Replaces 'weather-extra' --- */
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2x2 grid */
+  gap: 1rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  color: #9CA3AF; /* Secondary info text */
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.detail-item strong {
+  color: #F9FAFB; /* Primary text */
+  font-weight: 500;
+}
+
+.detail-item svg {
+  color: #38BDF8; /* Accent blue */
+}
+
+/* --- NEW: Daily Forecast Section --- */
+.weather-daily-forecast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(249, 250, 251, 0.15); /* Separator line */
+  text-align: left;
+  color: #9CA3AF; /* Secondary info text */
+}
+
+.daily-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.daily-item strong {
+  color: #F9FAFB; /* Primary text */
+  font-weight: 500;
+}
+
+.daily-item svg {
+  color: #FACC15; /* Accent yellow */
+}
+
+
+/* Footer section */
+.weather-footer {
+  /* PALETTE: Dimmed Primary White for border */
+  border-top: 1px solid rgba(249, 250, 251, 0.15);
+  margin-top: 1.4rem;
+  padding-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.weather-code {
+  /* PALETTE: Accent Yellow */
+  color: #FACC15;
+  font-weight: 500;
+}
+
+.weather-time {
+  font-style: italic;
+  /* PALETTE: Secondary Info Text */
+  color: #9CA3AF;
+}
+
+/* --- OLD STYLES REMOVED --- */
+/*
+.weather-extra {
+  ...
+}
+
+.extra-item {
+  ...
+}
+*/
