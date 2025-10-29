@@ -1,6 +1,6 @@
 # ☀️ Weather Now - React Weather App
 
-This is a sleek, responsive weather application built with React and plain CSS. It provides real-time weather data for any city in the world, fetching information from the Open-Meteo API and displaying it in a clean, "glassmorphism" style dark-mode interface.
+This is a sleek, responsive weather application built with React and plain CSS. It provides real-time weather data for any city in the world, fetching information from the Open-Meteo API and displaying it in a clean, dark-mode interface.
 
 ---
 
