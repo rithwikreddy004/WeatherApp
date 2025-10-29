@@ -7,7 +7,7 @@ This is a sleek, responsive weather application built with React and plain CSS. 
 ## 🚀 Live Demo on Codesandbox.io & Vercel
 
 Check out the live deployed version here:
-**[https://weather-app-swart-rho-95.vercel.app/](https://weather-app-swart-rho-95.vercel.app/)**
+**[https://weather-app-swart-rho-95.vercel.app/](https://weather-app-swart-rho-95.vercel.app/)**,
 **[https://fmlqqq-4173.csb.app/](https://fmlqqq-4173.csb.app/)**
 ---
 
